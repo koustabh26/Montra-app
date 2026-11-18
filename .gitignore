@@ -1,0 +1,32 @@
+# Build output
+/build/
+/app/build/
+.gradle/
+.kotlin/
+.externalNativeBuild/
+.cxx/
+/captures/
+*.apk
+*.aab
+
+# IDE / OS
+*.iml
+/.idea/
+.DS_Store
+Thumbs.db
+
+# Local configuration (contains your SDK path)
+/local.properties
+
+# Logs
+*.log
+
+# Secrets: signing keys and environment files must NEVER be committed
+*.jks
+*.keystore
+*.p12
+*.pem
+/keystore/
+.env
+.env.*
+!.env.example
