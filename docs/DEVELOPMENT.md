@@ -42,3 +42,14 @@ Use Android Studio's Logcat. Do not log PINs or financial values.
 - No instrumented/UI tests.
 - No database migration tests.
 - Single `AppViewModel` is large; splitting per feature is a reasonable refactor.
+
+## Gradle wrapper permissions
+
+If you upload files from Windows, `gradlew` can lose its executable bit and CI fails with "Permission denied". Fix once from any clone:
+
+```bash
+git update-index --chmod=+x gradlew
+git commit -m "Make gradlew executable"
+```
+
+The CI workflows also run `chmod +x gradlew` as a safeguard.
